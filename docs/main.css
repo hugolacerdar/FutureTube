@@ -37,6 +37,35 @@ li > a{
     text-decoration: none;
     color: white;
 }
+
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: auto;
+}
+.main-container menu,
+.main-container-int menu{
+    background-color: darkred;
+    height: 100%;
+    line-height: 40px;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.main-container menu ul,
+.main-container-int menu ul{
+    list-style: none;
+
+}
+.main-container menu li.atual{
+    border-bottom: palegoldenrod 1px solid;
+}
+.main-container-int{
+    display: grid;
+    grid-template-columns: 0.65fr 3fr 1fr;
+    grid-template-rows: auto;
+    /* height: 82vh; */
+}
 .container{
     display: grid;
     grid-gap: 20px;
@@ -68,27 +97,65 @@ article > span{
 }
 
 footer{
-    background-color: brown;
+    background-color: darkred;
     color: white;
     text-align: center;
     padding: 10px 0;
+    z-index: 2;
 }
 
 .video-container{
     margin: 10px 0;
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
+    flex-direction: column;
 }
-
+.abaixo-do-video{
+    display: flex;
+    justify-content: space-between;
+}
 .desc{
-    text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin: 20px 0;
+    margin-left: 10px;
 }
 video{
-    width: 80vw;
-    margin: 0 auto;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.sugestoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+.sugestoes div {
+    margin: 20px 5px;
+}
+.sugestoes div a{
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-start;
+}
+.sugestoes img{
+    width: 50%;
+}
+.sugestoes span{
+    margin: 2px 3px;
+}
+.sugestoes a{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+.sugestoes a:hover{
+    cursor: pointer;
+    font-weight: bold;
+    border: black double 1px;
+}
+
+button:hover{
+    cursor: pointer;
 }
 
 @media screen and (max-width: 800px){
